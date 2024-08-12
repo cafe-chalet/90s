@@ -1,8 +1,10 @@
 package main
 
 import (
+	"cmp"
 	"html/template"
 	"io"
+	"os"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -34,5 +36,6 @@ func main() {
 		return c.Render(200, "index", nil)
 	})
 
-	e.Logger.Fatal(e.Start(":3000"))
+	port := cmp.Or(os.Getenv("PORT"), "3000")
+	e.Logger.Fatal(e.Start(":" + port))
 }
