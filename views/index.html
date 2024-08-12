@@ -42,17 +42,8 @@
 </head>
 
 <body>
-	<header class="headline">
-		<h1>
-				<span class="box">It's the</span>
-				<span class="year blink">90s!</span>
-		</h1>
-
-		<marquee behavior="scroll" scrollamount="10">Music • Pop-ups • Food • Drinks • Good Company</marquee>
-
-		<p>August 17, 2024</p>
-	</header>
-
+	{{ template "header" . }}
+	
 	<main>
 		<article>
 			<img src="images/yahooweek.gif" />
@@ -99,6 +90,11 @@
 					<li>Louise Mireille</li>
 					<li>Covenstead</li>
 					<li>Havaianas</li>
+					<li>project.soda</li>
+					<li>Calmansii</li>
+					<li>Kimoy</li>
+					<li>Julio</li>
+					<li>Troy's Arttifact</li>
 				</ul>
 			</section>
 		</article>
@@ -137,6 +133,22 @@
 			<a target="_blank" href="https://www.tiktok.com/@holodeckproductions">@holodeckproductions</a>
 		</div>
 	</footer>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", (event) => {
+			document.body.addEventListener('htmx:beforeSwap', function(evt) {
+			    if (evt.detail.xhr.status === 422) {
+			        // allow 422 responses to swap as we are using this as a signal that
+			        // a form was submitted with bad data and want to rerender with the
+			        // errors
+			        //
+			        // set isError to false to avoid error logging in console
+			        evt.detail.shouldSwap = true;
+			        evt.detail.isError = false;
+			    }
+			});
+		})
+		</script>
 </body>
 </html>
 {{ end }}
