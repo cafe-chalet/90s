@@ -16,7 +16,12 @@ body {
 	background-image: url("../images/bolt.gif");
 	background-size: 96px 96px;
 	background-blend-mode: overlay;
+	color: #F567D2;
 	font-family: "Shantell Sans";
+}
+
+header {
+	text-align: center;
 }
 
 h1 {
@@ -24,7 +29,6 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 
-	color: #F567D2;
 	font-size: 4rem;
 
 	position: relative;
@@ -49,10 +53,8 @@ h1 .year {
 	}
 }
 
-/* blink fix in chrome */
-blink {
-	-webkit-animation-name: blink;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
-	-webkit-animation-duration: 1s;
+marquee {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	max-width: 400px;
 }
