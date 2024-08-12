@@ -23,6 +23,11 @@ body {
 	text-align: center;
 }
 
+main {
+	color: #F5206E;
+	padding: 1rem 0;
+}
+
 h1 {
 	display: flex;
 	flex-direction: column;
@@ -39,7 +44,7 @@ h1 .box {
 }
 
 h1 .year {
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 .blink {
@@ -56,6 +61,47 @@ marquee {
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	max-width: 400px;
+}
+
+
+.covers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.covers h2 {
+	font-size: 2rem;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.artists,
+.shops {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	line-height: 1.5em;
+}
+
+.badges {
+	padding: 2rem 0;
+}
+
+footer {
+	padding: 2rem 0;
+}
+
+.headline p {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+section {
+	padding: 2rem 0;
 }
 
 footer div+img {
