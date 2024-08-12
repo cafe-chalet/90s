@@ -14,6 +14,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o bin/app_p
 FROM scratch
 WORKDIR /app
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=builder /app/bin .
+COPY --from=builder /app/. .
 EXPOSE 3000
-CMD [ "/app/app_prod" ]
+CMD [ "/app/bin/app_prod" ]
