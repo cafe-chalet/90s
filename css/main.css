@@ -14,13 +14,12 @@ body {
 body {
 	background-color: #58D8DD;
 	background-image: url("../images/bolt.gif");
-	background-size: 96px 96px;
+	background-size: 88px 88px;
 	background-blend-mode: overlay;
 	color: #F567D2;
 	font-family: "Shantell Sans";
-}
+	padding: 24px;
 
-header {
 	text-align: center;
 }
 
@@ -57,4 +56,8 @@ marquee {
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	max-width: 400px;
+}
+
+footer div+img {
+	margin-top: 1rem;
 }
