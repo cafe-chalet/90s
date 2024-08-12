@@ -25,6 +25,8 @@ func newTemplate() *Templates {
 func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
+	e.Static("/css", "css")
+	e.Static("/images", "images")
 
 	e.Renderer = newTemplate()
 
