@@ -6,21 +6,22 @@ body {
 	font-size: 100%;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 body {
 	background-color: #58D8DD;
 	background-image: url("../images/bolt.gif");
-	background-size: 88px 88px;
+	background-size: 64px 64px;
 	background-blend-mode: overlay;
 	color: #F567D2;
 	font-family: "Shantell Sans";
 	padding: 24px;
 
 	text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		background-size: 48px 48px;
+	}
 }
 
 main {
