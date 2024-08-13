@@ -32,8 +32,8 @@
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-517N8178R2');
+		gtag("js", new Date());
+		gtag("config", "G-517N8178R2");
 	</script>
 
 	<!-- HTMX -->
@@ -51,7 +51,7 @@
 
 	<script>
 		document.addEventListener("DOMContentLoaded", (event) => {
-			document.body.addEventListener('htmx:beforeSwap', function (evt) {
+			document.body.addEventListener("htmx:beforeSwap", function (evt) {
 				if (evt.detail.xhr.status === 422) {
 					// allow 422 responses to swap as we are using this as a signal that
 					// a form was submitted with bad data and want to rerender with the
