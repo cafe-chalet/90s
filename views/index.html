@@ -10,35 +10,36 @@
 	<title>It's the 90s!</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-	<meta property="og:title" content="It's the 90s!"/>
-  <meta property="og:image" content="https://90s.cafechaletdvo.com/images/banner.png"/>
-  <meta property="og:description" content="A day filled with 90s covers and pop-ups of local merch."/>
+	<meta property="og:title" content="It's the 90s!" />
+	<meta property="og:image" content="https://90s.cafechaletdvo.com/images/banner.png" />
+	<meta property="og:description" content="A day filled with 90s covers and pop-ups of local merch." />
 
 	<!-- NormalizeCSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+		rel="stylesheet">
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-517N8178R2"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-517N8178R2');
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-517N8178R2');
 	</script>
 
 	<!-- HTMX -->
-	<script
-		src="https://unpkg.com/htmx.org@2.0.1"
+	<script src="https://unpkg.com/htmx.org@2.0.1"
 		integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
-		crossorigin="anonymous"
-	></script>
+		crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,56 +48,23 @@
 	{{ template "main" . }}
 
 	{{ template "footer" . }}
-	
-	<footer>
-		<div>
-			A Cafe Chalet event co-hosted with Holodeck Productions. © 1999. All rights reserved.
-		</div>
-
-		<img src="images/emailme.gif" />
-
-		<div>
-			<a href="mailto:bonjour@cafechaletdvo.com">bonjour@cafechaletdvo.com</a>
-			<a href="mailto:holodeckproductions@gmail.com">holodeckproductions@gmail.com</a>
-		</div>
-
-		<img src="images/insta.png" height="24" width="24">
-
-		<div>
-			<a target="_blank" href="https://www.instagram.com/cafechaletdvo">@cafechaletdvo</a>
-			<a target="_blank" href="https://www.instagram.com/holodeckproductions">@holodeckproductions</a>
-		</div>
-
-		<img src="images/fb.png" height="24" width="24">
-
-		<div>
-			<a target="_blank" href="https://www.facebook.com/cafechaletdvo">@cafechaletdvo</a>
-			<a target="_blank" href="https://www.facebook.com/holodeckproductions">@holodeckproductions</a>
-		</div>
-
-		<img src="images/tiktok.png" height="24" width="24">
-
-		<div>
-			<a target="_blank" href="https://www.tiktok.com/@cafechaletdvo">@cafechaletdvo</a>
-			<a target="_blank" href="https://www.tiktok.com/@holodeckproductions">@holodeckproductions</a>
-		</div>
-	</footer>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", (event) => {
-			document.body.addEventListener('htmx:beforeSwap', function(evt) {
-			    if (evt.detail.xhr.status === 422) {
-			        // allow 422 responses to swap as we are using this as a signal that
-			        // a form was submitted with bad data and want to rerender with the
-			        // errors
-			        //
-			        // set isError to false to avoid error logging in console
-			        evt.detail.shouldSwap = true;
-			        evt.detail.isError = false;
-			    }
+			document.body.addEventListener('htmx:beforeSwap', function (evt) {
+				if (evt.detail.xhr.status === 422) {
+					// allow 422 responses to swap as we are using this as a signal that
+					// a form was submitted with bad data and want to rerender with the
+					// errors
+					//
+					// set isError to false to avoid error logging in console
+					evt.detail.shouldSwap = true;
+					evt.detail.isError = false;
+				}
 			});
 		})
-		</script>
+	</script>
 </body>
+
 </html>
 {{ end }}
