@@ -36,6 +36,6 @@ func main() {
 		return c.Render(200, "index", nil)
 	})
 
-	port := cmp.Or(os.Getenv("PORT"), "3000")
+	port := cmp.Or(os.Getenv("PORT"), "9999")
 	e.Logger.Fatal(e.Start(":" + port))
 }
